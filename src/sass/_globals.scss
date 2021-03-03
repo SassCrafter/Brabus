@@ -36,7 +36,7 @@ img {
 }
 
 .container {
-	width: 100%;
+	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 2rem;
@@ -57,4 +57,60 @@ img {
 	@extend %flex;
 	align-items: center;
 	justify-content: center;
+}
+
+// Text
+
+.xlarge {
+	font-size: 7.5rem;
+	text-transform: capitalize;
+	color: $secondary-color;
+
+	span {
+		color: transparent;
+		-webkit-text-stroke: 2px $text-color-white;
+	}
+}
+
+.tagline {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+
+
+	span {
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+		position: relative;
+		font-size: 1em;
+
+		&::after {
+			content: '';
+			width: 3rem;
+			height: 1px;
+			background-color: $secondary-color;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+	}
+
+	h6 {
+		font-size: 1em;
+		font-family: $font-secondary;
+		font-weight: 400;
+		text-transform: uppercase;
+		opacity: 0.5;
+	}
+}
+
+@include mq(768px) {
+	.xlarge {
+		font-size: 9rem;
+	}
+
+	.tagline {
+		font-size: 2.2rem;
+	}
 }

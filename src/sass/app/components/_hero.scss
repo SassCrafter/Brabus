@@ -1,0 +1,39 @@
+.hero {
+	width: 100%;
+	height: 100vh;
+	color: $text-color-white;
+
+	&__swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 80% center;
+		&--1 {
+			background-image: url('../../dist/images/swiper/slide01.jpg');
+		}
+		&--2 {
+			background-image: url('../../dist/images/swiper/slide02.jpg');
+		}
+		&--3 {
+			background-image: url('../../dist/images/swiper/slide03.jpg');
+		}
+
+		.container {
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
