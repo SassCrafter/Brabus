@@ -23,6 +23,10 @@ h1,h2,h3,h4 {
 	margin-bottom: 2rem;
 }
 
+p {
+	font-size: 1.6rem;
+}
+
 ul {
 	list-style: none;
 }
@@ -33,6 +37,17 @@ a {
 
 img {
 	max-width: 100%;
+}
+
+
+.section .container {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+.section p {
+	font-size: 1.8rem;
+	margin-bottom: 3rem;
 }
 
 .container {
@@ -166,7 +181,45 @@ img {
 	}
 }
 
+.title {
+	h6 {
+		font-family: $font-secondary;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		opacity: 0.5;
+		margin-bottom: 3rem;
+		position: relative;
+
+		&::before {
+			content: attr(data-text);
+			font-size: 20vw;
+			opacity: 0.1;
+			position: absolute;
+			top: -10vw;
+		}
+	}
+
+	h2 {
+		font-size: 3.2rem;
+		margin-bottom: 2rem;
+		position: relative;
+	}
+}
+
+.lead {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+
 @include mq(768px) {
+	.section p {
+		font-size: 2rem;
+	}
 	.xlarge {
 		// font-size: 9rem;
 		font-size: 15vw;
@@ -180,10 +233,62 @@ img {
 	.tagline {
 		font-size: 2.2rem;
 	}
+
+	.title {
+		h6 {
+			font-size: 1.8rem;
+			&::before {
+				font-size: 12vw;
+				top: -6vw;
+			}
+		}
+		h2 {
+			font-size: 6rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	
 }
 
 @include mq(900px) {
 	.xlarge {
 		font-size: 10vw;
+	}
+
+	.title {
+		h6 {
+			margin-bottom: 5rem;
+			&::before {
+				font-size: 10vw;
+				top: -5vw;
+			}
+		}
+	}
+
+	.lead {
+		font-size: 1.6rem;
+	}
+
+	.row {
+		display: flex;
+	}
+
+	.col {
+		flex: 1;
+
+		&-md {
+			flex: 2;
+		}
+	}
+}
+
+
+@include mq(1400px) {
+	.title {
+		h6::before {
+			font-size: 12rem;
+			top: -6rem;
+		}
 	}
 }
