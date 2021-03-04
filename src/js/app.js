@@ -1,6 +1,5 @@
 import '../sass/style.scss';
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+import VanillaTilt from 'vanilla-tilt';
 import { zoomEffect } from './vendors/zoomInOutEffect';
 import HeroSlider from './vendors/heroSlider';
 
