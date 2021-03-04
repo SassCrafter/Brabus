@@ -36,7 +36,7 @@ img {
 }
 
 .container {
-	width: 90%;
+	width: 90% !important;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 2rem;
@@ -62,7 +62,7 @@ img {
 .scroll-down {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: -1.3rem;
 	z-index: 20;
 
 	small {
@@ -96,10 +96,34 @@ img {
 	}
 }
 
+.sm {
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	li {
+		margin: 0 1rem 1rem 0;
+	}
+
+	a {
+		display: inline-block;
+		//padding: .5rem;
+		padding-bottom: .5rem;
+		color: $text-color-white;
+		text-transform: uppercase;
+		font-family: $font-secondary;
+		font-size: 1.6rem;
+		font-weight: 500;
+		@include hover($text-color-white);
+	}
+}
+
 // Text
 
 .xlarge {
-	font-size: 7.5rem;
+	//font-size: 7.5rem;
+	font-size: 20vw;
 	text-transform: capitalize;
 	color: $secondary-color;
 
@@ -144,7 +168,8 @@ img {
 
 @include mq(768px) {
 	.xlarge {
-		font-size: 9rem;
+		// font-size: 9rem;
+		font-size: 15vw;
 
 		span {
 			display: inline-block;
@@ -154,5 +179,11 @@ img {
 
 	.tagline {
 		font-size: 2.2rem;
+	}
+}
+
+@include mq(900px) {
+	.xlarge {
+		font-size: 10vw;
 	}
 }

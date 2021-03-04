@@ -1,38 +1,26 @@
 import anime from 'animejs/lib/anime.es.js';
 
-export function mobileTogglerAnimation(el) {
-	if (!el.classList.contains('active')) return;
-	console.log("HEY")
-	const tl = anime.timeline({duration: 300, easing: 'easeInOutQuad'});
-	const lines = el.querySelectorAll('.line');
+
+
+export function hidePreloader() {
+	const tl = anime.timeline({duration: 500, easing: 'easeInOutQuad'});
 	tl
 	.add({
-		targets: el.querySelector('.line--middle'),
-		translateX: '-120%',
+		targets: '.preloader__inner img',
+		opacity: [1, 0],
+		translateY: 50,
+		translateZ: 0,
+		delay: 1000
+	})
+	.add({
+		targets: '.preloader__layer',
+		translateY: '100%',
+		translateZ: 0,
+		delay: anime.stagger(100),
+	})
+	.add({
+		targets: '.preloader',
+		scaleY: [1,0],
 		translateZ: 0,
 	})
-	.add({
-		targets: el.querySelector('.line--top'),
-		top: '50%',
-		width: {
-			value: '100%',
-			delay: 300,
-		},
-		rotate: {
-			value: 45,
-			delay: 300,
-		}
-	})
-	.add({
-		targets: el.querySelector('.line--bot'),
-		top: '50%',
-		width: {
-			value: '100%',
-			delay: 300,
-		},
-		rotate: {
-			value: -45,
-			delay: 300,
-		}
-	}, 300)
 }

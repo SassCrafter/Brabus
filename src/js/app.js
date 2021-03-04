@@ -2,6 +2,7 @@ import '../sass/style.scss';
 import VanillaTilt from 'vanilla-tilt';
 import { zoomEffect } from './vendors/zoomInOutEffect';
 import HeroSlider from './vendors/heroSlider';
+import { hidePreloader } from './animations';
 
 import NavigationMenu from './navigationMenu.js';
 
@@ -23,4 +24,6 @@ const navMenu = new NavigationMenu();
 //     },
 // });
 
-const heroSlider = new HeroSlider()
+const heroSlider = new HeroSlider();
+
+hidePreloader();

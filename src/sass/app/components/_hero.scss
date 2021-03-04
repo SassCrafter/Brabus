@@ -6,6 +6,35 @@
 	background-color: #111;
 	position: relative;
 
+	& > .container {
+		// width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	.sm {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: -6rem;
+		transform: translateY(-50%);
+		z-index: 20;
+		pointer-events: initial;
+
+		@include mq(768px) {
+			display: flex;
+		}
+
+		&__list {
+			transform: rotate(-90deg);
+		}
+	}
+
 	&__swiper {
 		width: 100%;
 		height: 100%;
@@ -48,6 +77,12 @@
 			height: 100%;
 			display: flex;
 			align-items: center;
+
+			@include mq(768px) {
+				&>div {
+					margin-left: 5rem;
+				}
+			}
 		}
 	}
 
