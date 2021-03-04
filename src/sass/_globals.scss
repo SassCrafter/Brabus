@@ -59,6 +59,35 @@ img {
 	justify-content: center;
 }
 
+.scroll-down {
+	position: absolute;
+	bottom: 10rem;
+	left: 0;
+	z-index: 20;
+	transform: rotate(-90deg);
+	font-size: 1.6rem;
+
+	span {
+		display: inline-block;
+		font-size: 1em;
+		font-family: $font-secondary;
+		text-transform: uppercase;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 0;
+			height: 2px;
+			background-color: $text-color-white;
+			position: absolute;
+			top: 50%;
+			left: -80%;
+			transform: translateY(-50%);
+			animation: widthAlternate 600ms ease-in-out infinite;
+		}
+	}
+}
+
 // Text
 
 .xlarge {
