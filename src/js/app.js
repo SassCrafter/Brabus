@@ -1,6 +1,7 @@
 import '../sass/style.scss';
 import { changeNavOnScroll } from './nav';
 import VanillaTilt from 'vanilla-tilt';
+import './vendors/locomotiveScroll.js';
 import { zoomEffect } from './vendors/zoomInOutEffect';
 import HeroSlider from './vendors/heroSlider';
 import { hidePreloader } from './animations';

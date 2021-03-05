@@ -24,3 +24,11 @@ export function hidePreloader() {
 		translateZ: 0,
 	})
 }
+
+export function opacity(el, value) {
+	anime({
+		targets: el,
+		opacity: value,
+		duration: 200,
+	})
+}
