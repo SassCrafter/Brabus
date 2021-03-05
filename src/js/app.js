@@ -1,4 +1,5 @@
 import '../sass/style.scss';
+import { changeNavOnScroll } from './nav';
 import VanillaTilt from 'vanilla-tilt';
 import { zoomEffect } from './vendors/zoomInOutEffect';
 import HeroSlider from './vendors/heroSlider';
@@ -25,5 +26,7 @@ const navMenu = new NavigationMenu();
 // });
 
 const heroSlider = new HeroSlider();
+
+changeNavOnScroll();
 
 hidePreloader();

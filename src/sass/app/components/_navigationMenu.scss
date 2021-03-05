@@ -4,7 +4,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 997;
 	pointer-events: none;
 
 	.bg-layers {
@@ -14,6 +14,7 @@
 		top: 0;
 		left: 0;
 		display: flex;
+		z-index: 998;
 
 		
 
@@ -72,6 +73,7 @@
 		top: 0;
 		left: 0;
 		@include flex;
+		z-index: 999;
 	}
 
 	.menu {

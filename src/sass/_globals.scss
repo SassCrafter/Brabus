@@ -25,6 +25,7 @@ h1,h2,h3,h4 {
 
 p {
 	font-size: 1.6rem;
+	margin-bottom: 1rem;
 }
 
 ul {
@@ -45,7 +46,7 @@ img {
 	padding-bottom: 6rem;
 }
 
-.section p {
+.intro p {
 	font-size: 1.8rem;
 	margin-bottom: 3rem;
 }
@@ -60,6 +61,7 @@ img {
 
 .logo {
 	width: 6rem;
+	transition: transform $t-time $t-ease;
 }
 
 
@@ -72,6 +74,29 @@ img {
 	@extend %flex;
 	align-items: center;
 	justify-content: center;
+}
+
+
+// Backgrounds
+.bg-dark {
+	background-color: $bg-color-dark;
+	color: $text-color-white;
+}
+
+
+.line-right {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 4rem;
+		height: 1px;
+		background-color: $primary-color;
+		position: absolute;
+		top: 50%;
+		right: -5rem;
+		transform: translateY(-50%);
+	}
 }
 
 .scroll-down {
@@ -189,20 +214,20 @@ img {
 		opacity: 0.5;
 		margin-bottom: 3rem;
 		position: relative;
-
-		&::before {
-			content: attr(data-text);
-			font-size: 20vw;
-			opacity: 0.1;
-			position: absolute;
-			top: -10vw;
-		}
 	}
 
 	h2 {
 		font-size: 3.2rem;
 		margin-bottom: 2rem;
 		position: relative;
+
+		&::before {
+			content: attr(data-text);
+			font-size: 20vw;
+			opacity: 0.05;
+			position: absolute;
+			top: -10vw;
+		}
 	}
 }
 
@@ -235,6 +260,7 @@ img {
 	}
 
 	.title {
+		max-width: 70rem;
 		h6 {
 			font-size: 1.8rem;
 			&::before {
@@ -264,6 +290,10 @@ img {
 				top: -5vw;
 			}
 		}
+
+		h2 {
+			font-size: 7rem;
+		}
 	}
 
 	.lead {
@@ -272,13 +302,20 @@ img {
 
 	.row {
 		display: flex;
+		justify-content: center;
 	}
 
 	.col {
 		flex: 1;
+		margin: 1rem;
+
+
+		&-sm {
+			flex: 2;
+		}
 
 		&-md {
-			flex: 2;
+			flex: 3;
 		}
 	}
 }

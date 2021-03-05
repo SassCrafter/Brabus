@@ -6,6 +6,17 @@
 	left: 0;
 	//background: black;
 	z-index: 1000;
+	transform-origin: center top;
+	transition: background-color $t-time linear, height $t-time $t-ease;
+
+	&.active {
+		background-color: $bg-color-dark;
+		height: 6rem;
+
+		.logo {
+			transform: scale(0.8);
+		}
+	}
 
 	.container {
 		height: 100%;

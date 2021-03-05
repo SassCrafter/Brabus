@@ -1,0 +1,33 @@
+.services {
+
+	&__container {
+		@include flex(flex-start);
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex: 1 0 25rem;
+		display: flex;
+		flex-direction: column;
+		margin: 1rem 0;
+	}
+
+	.count {
+		color: $primary-color;
+		margin-bottom: 2rem;
+	}
+
+	h4 {
+		font-size: 1.7rem;
+		text-transform: uppercase;	
+	}
+
+	ul {
+		list-style: disc inside;
+
+		li {
+			margin: 0.5rem 0;
+		}
+	}
+}
