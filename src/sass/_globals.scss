@@ -41,15 +41,36 @@ img {
 }
 
 
+.intro p {
+	font-size: 1.8rem;
+	margin-bottom: 3rem;
+}
+
+.work-with-us {
+	.title {
+		max-width: 80rem;
+	}
+	h4 {
+		font-size: 1.8rem;
+		font-weight: 500;
+		font-family: $font-secondary;
+		line-height: 1.3;
+		text-transform: uppercase;
+
+		@include mq(768px) {
+			font-size: 2.4rem;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+
 .section .container {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 }
 
-.intro p {
-	font-size: 1.8rem;
-	margin-bottom: 3rem;
-}
+
 
 .container {
 	width: 90% !important;
@@ -83,6 +104,25 @@ img {
 	color: $text-color-white;
 }
 
+.bg-primary {
+	background-color: $primary-color;
+}
+
+.bg-noise {
+	position: relative;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include bg-image('../../dist/images/swiper/bg-noise.gif');
+		opacity: 0.05;
+		pointer-events: none;
+	}
+}
 
 .line-right {
 	position: relative;
@@ -161,6 +201,10 @@ img {
 
 // Text
 
+.text {
+	max-width: 40rem;
+}
+
 .xlarge {
 	//font-size: 7.5rem;
 	font-size: 20vw;
@@ -207,6 +251,7 @@ img {
 }
 
 .title {
+	max-width: 70rem;
 	h6 {
 		font-family: $font-secondary;
 		font-size: 1.4rem;
@@ -223,10 +268,10 @@ img {
 
 		&::before {
 			content: attr(data-text);
-			font-size: 20vw;
+			font-size: 25vw;
 			opacity: 0.05;
 			position: absolute;
-			top: -10vw;
+			top: -12.5vw;
 		}
 	}
 }
@@ -274,17 +319,17 @@ img {
 	}
 
 	.title {
-		max-width: 70rem;
 		h6 {
-			font-size: 1.8rem;
-			&::before {
-				font-size: 12vw;
-				top: -6vw;
-			}
+			font-size: 1.2rem;
 		}
 		h2 {
 			font-size: 6rem;
 			margin-bottom: 3rem;
+
+			&::before {
+				font-size: 20vw;
+				top: -10vw;
+			}
 		}
 	}
 
@@ -297,16 +342,12 @@ img {
 	}
 
 	.title {
-		h6 {
-			margin-bottom: 5rem;
-			&::before {
-				font-size: 10vw;
-				top: -5vw;
-			}
-		}
-
 		h2 {
 			font-size: 7rem;
+			&::before {
+				font-size: 15vw;
+				top: -7.5vw;
+			}
 		}
 	}
 

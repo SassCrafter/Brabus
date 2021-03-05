@@ -26,6 +26,18 @@ const navMenu = new NavigationMenu();
 //     },
 // });
 
+const workItems = document.querySelectorAll('.works__item');
+const worksSection = document.querySelector('.works');
+
+workItems.forEach((item) => {
+	item.addEventListener('mouseenter', (e) => {
+		worksSection.style.backgroundColor = e.target.dataset.bg;
+	});
+	item.addEventListener('mouseleave', () => {
+		worksSection.style.backgroundColor = document.body.style.backgroundColor;
+	});
+})
+
 const heroSlider = new HeroSlider();
 
 changeNavOnScroll();
