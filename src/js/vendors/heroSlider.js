@@ -159,4 +159,8 @@ The startTranslate doesn't exist on initial load so we use the initialSlide inde
       // }
     });
   }
+
+  destroy() {
+    this.swiper.destroy();
+  }
 }
