@@ -1,0 +1,55 @@
+.footer {
+	.logo {
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		max-width: 50rem;
+		font-size: 3rem;
+		font-family: $font-secondary;
+		letter-spacing: 2px;
+		margin-bottom: 3rem;
+		color: $primary-color;
+
+		@include mq(768px) {
+			margin-bottom: 5rem;
+		}
+	}
+
+	h5 {
+		font-weight: 400;
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-family: $font-secondary;
+		color: $primary-color;
+		margin-bottom: 2rem;
+	}
+
+	&__contact {
+		margin-bottom: 3rem;
+		@include flex(flex-start, flex-start);
+		flex-direction: column;
+
+		@include mq(768px) {
+			margin-bottom: 5rem;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		li {
+			font-size: 1.8rem;
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+
+				@include mq(768px) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		a {
+			color: $text-color-white;
+		}
+	}
+
+}

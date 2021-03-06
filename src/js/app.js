@@ -1,12 +1,16 @@
 import '../sass/style.scss';
-import { changeNavOnScroll } from './nav';
-import VanillaTilt from 'vanilla-tilt';
 import './vendors/locomotiveScroll.js';
-import { zoomEffect } from './vendors/zoomInOutEffect';
-import HeroSlider from './vendors/heroSlider';
-import { hidePreloader } from './animations';
+import VanillaTilt from 'vanilla-tilt';
+import barba from '@barba/core';
 
 import NavigationMenu from './navigationMenu.js';
+import HeroSlider from './vendors/heroSlider';
+
+import { changeNavOnScroll } from './nav';
+import { zoomEffect } from './vendors/zoomInOutEffect';
+import { hidePreloader, showPreloader } from './animations';
+
+
 
 const navMenu = new NavigationMenu();
 
@@ -43,3 +47,27 @@ const heroSlider = new HeroSlider();
 changeNavOnScroll();
 
 hidePreloader();
+
+barba.init({
+	transitions: [
+
+	{
+		name: 'default',
+
+		leave() {
+			const done = this.async();
+			console.log("Leaving");
+			showPreloader(() => {
+				console.log("CALLBACK");
+				done();
+			});
+		},
+		enter() {
+			console.log("Entering");
+			 hidePreloader();
+			 if (navMenu.isOpen) navMenu.hide();
+		}
+	}
+
+	]
+})
