@@ -40,6 +40,15 @@ img {
 	max-width: 100%;
 }
 
+[data-scroll-class] {
+	opacity: 0;
+}
+
+.js-reveal {
+	opacity: 1;
+	transition: opacity $t-time $t-ease;
+}
+
 
 .page-hero {
 	.container {
@@ -49,7 +58,9 @@ img {
 
 	.content {
 		max-width: 50rem;
-		margin-left: 7rem;
+		@include mq(768px) {
+			margin-left: 7rem;
+		}
 	}
 
 	h1 {

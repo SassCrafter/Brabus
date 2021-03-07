@@ -2,11 +2,13 @@ import '../sass/style.scss';
 // import './vendors/locomotiveScroll.js';
 import VanillaTilt from 'vanilla-tilt';
 import barba from '@barba/core';
+import barbaPrefetch from '@barba/prefetch';
+import fslightbox from 'fslightbox';
 
 import NavigationMenu from './navigationMenu.js';
 import HeroSlider from './vendors/heroSlider';
 
-import { scroll, opacityScroll } from './vendors/locomotiveScroll';
+import { scroll, opacityScroll, scrollReveal } from './vendors/locomotiveScroll';
 import { changeNavOnScroll } from './nav';
 import { zoomEffect } from './vendors/zoomInOutEffect';
 import { hidePreloader, showPreloader } from './animations';
@@ -50,8 +52,55 @@ const heroSlider = new HeroSlider();
 
 changeNavOnScroll();
 opacityScroll();
+scrollReveal();
 hidePreloader();
 changeBgOnHover();
+checkLinks();
+
+
+
+
+// Barba settings
+
+function checkLinks() {
+	const links = document.querySelectorAll('a[href]');
+	const cbk = (e) => {
+	 if(e.currentTarget.href === window.location.href) {
+	   e.preventDefault();
+	   e.stopPropagation();
+	   if (navMenu.isOpen) navMenu.hide();
+	   showPreloader(hidePreloader);
+	 }
+
+	 if (e.currentTarget.hasAttribute('data-fslightbox')) {
+	 	e.preventDefault();
+	   	e.stopPropagation();
+	   	console.log("IMAGE")
+	 }
+	};
+
+	for(let i = 0; i < links.length; i++) {
+	  links[i].addEventListener('click', cbk);
+	}
+}
+
+
+
+barba.use(barbaPrefetch);
+
+barba.hooks.beforeLeave((data) => {
+    scroll.destroy();
+});
+
+barba.hooks.after((data) => {
+    scroll.init();
+    opacityScroll();
+    scrollReveal();
+	changeBgOnHover();
+	checkLinks();
+	refreshFsLightbox();
+});
+
 
 barba.init({
 	transitions: [
@@ -63,7 +112,7 @@ barba.init({
 			const done = this.async();
 			console.log("Leaving ");
 
-			scroll.destroy();
+			// scroll.destroy();
 			showPreloader(() => {
 				// console.log("CALLBACK");
 				done();
@@ -71,17 +120,14 @@ barba.init({
 		},
 		enter({next}) {
 			console.log(next);
-			const done = this.async();
-			done();
 			hidePreloader();
-			scroll.init();
-			opacityScroll();
-			changeBgOnHover();
+			// scroll.init();
+			// opacityScroll();
 			if (navMenu.isOpen) navMenu.hide();
 			if (next.namespace === 'home') {
 				 heroSlider.init();
 			};
-		}
+		},
 	}
 
 	]
