@@ -1,0 +1,56 @@
+.direction {
+	width: 100%;
+
+	figure {
+		width: 100%;
+		position: relative;
+
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	figcaption {
+		width: 100%;
+		margin: 0;
+		background-color: #4C4C4C;
+		color: $text-color-white;
+
+		// @include mq(900px) {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 50%;
+		// }
+	}
+
+	&__inner {
+		width: 100%;
+		padding: 4rem;
+	}
+
+	li:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	h3 {
+		font-family: $font-secondary;
+		font-size: 2.6rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 4rem;
+
+		@include mq(900px) {
+			font-size: 2.2rem;
+		}
+	}
+
+	h4 {
+		text-transform: uppercase;
+		font-family: $font-secondary;
+		font-size: 2rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+}
