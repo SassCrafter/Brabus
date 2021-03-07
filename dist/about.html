@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Brabus</title>
+	<title>About us</title>
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,7 +37,7 @@
 			<span></span>
 			<span></span>
 		</div>
-		<div class="inner js-tilt" data-tilt-speed="600" data-tilt-reset="false">
+		<div class="inner" data-tilt data-tilt-speed="600" data-tilt-reset="false">
 			<ul class="menu">
 				<li class="menu__item">
 					<a href="./works.html" class="menu__link">Works</a>
@@ -83,61 +83,16 @@
 
 	<main data-barba="container" data-barba-namespace="home" data-scroll-container>
 		<!-- Hero start -->
-		<section class="hero" data-scroll data-scroll-id="hero">
+		<section class="hero page-hero" data-scroll data-scroll-id="hero">
 			<div class="overlay overlay--white"></div>
-			<!-- Swiper start -->
-			<div class="swiper-container hero__swiper js-tilt" data-tilt-max="3">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide--1">
-						<div class="swiper-slide-content container">
-							<div>
-								<div class="tagline">
-								    <span>01</span>
-								    <h6>Transitions for a collected experiences</h6>
-							    </div>
-							        <h1 class="xlarge">Racer
-								       <br>
-								       <span>Female</span>
-							       </h1>
-						        </div>
-							</div>
-					</div>
-					<!-- Slide end -->
-					<div class="swiper-slide swiper-slide--2">
-						<div class="swiper-slide-content container">
-							<div>
-								<div class="tagline">
-								    <span>02</span>
-								    <h6>Connect your online stores to brabusy</h6>
-							    </div>
-							        <h1 class="xlarge">Liberty
-								       <br>
-								       <span>Fighter</span>
-							       </h1>
-						        </div>
-							</div>
-					</div>
-					<!-- Slide end -->
-					<div class="swiper-slide swiper-slide--3">
-						<div class="swiper-slide-content container">
-							<div>
-								<div class="tagline">
-								    <span>03</span>
-								    <h6>View past and upcoming recievments</h6>
-							    </div>
-							        <h1 class="xlarge">Female
-								       <br>
-								       <span>Warrior</span>
-							       </h1>
-						        </div>
-							</div>
-					</div>
-					<!-- Slide end -->
-				</div>
-				<div class="swiper-pagination"></div>
+			<div class="video-bg">
+				<video src="./videos/works.mp4" loop muted autoplay></video>
 			</div>
-			<!-- Swiper end -->
 			<div class="container">
+				<div class="content">
+					<h1>brabus</h1>
+					<p>TO CREATE A POWERFUL PROJECT ONCE, A BIT OF LUCK IS ENOUGH</p>
+				</div>
 				<div class="scroll-down">
 					<small>scroll down</small>
 					<span></span>
@@ -256,105 +211,123 @@
 		<!-- Services end -->
 
 
-		<!-- Works start -->
-		<section class="section works">
+		<!-- Process start -->
+		<section class="section process">
 			<div class="container">
-				<div class="title " data-scroll data-scroll-class="js-reveal">
-					<h6>smooth interface interaction</h6>
-					<h2 data-text="Works">Our selected works and showcases</h2>
+				<div class="title" data-scroll data-scroll-class="js-reveal">
+					<h6>SMOOTH INTERFACE INTERACTION</h6>
+					<h2 data-text="Steps">Process</h2>
 				</div>
-
-				<div class="works__container">
-					<div class="works__item " data-bg="#faf8ed" data-scroll data-scroll-class="js-reveal">
-						<div class="image">
-							<a href="./images/sections/works/1.jpg" data-fslightbox>
-								<img src="./images/sections/works/1.jpg" alt="Work 1">
-							</a>
+				<div class="process__container flex">
+					<div class="process__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<div class="process__count">
+							<span>01</span>
 						</div>
-						<div class="content">
-							<small>AMAZING USER INTERFACE & SMOOTH INTERACTION</small>
-							<h3>
-								<span>karamel</span>
-								coffee
-							</h3>
-							<div class="custom-link">
-								<div class="lines">
-									<span></span>
-									<span></span>
-								</div>
-								<a href="#">learn more</a>
-							</div>
-						</div>
+						<figure>
+							<img src="./images/pages/about/icons/process/icon01.jpg" alt="Preparation">
+							<figcaption>preparation</figcaption>
+						</figure>
 					</div>
-					<!-- Item end -->
-					<div class="works__item " data-bg="#ece6f4" data-scroll data-scroll-class="js-reveal">
-						<div class="image">
-							<a href="./images/sections/works/2.jpg" data-fslightbox>
-								<img src="./images/sections/works/2.jpg" alt="Work 2">
-							</a>
+					<!-- Process item end -->
+					<div class="process__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<div class="process__count">
+							<span>02</span>
 						</div>
-						<div class="content">
-							<small>AMAZING USER INTERFACE & SMOOTH INTERACTION</small>
-							<h3>
-								<span>karamel</span>
-								coffee
-							</h3>
-							<div class="custom-link">
-								<div class="lines">
-									<span></span>
-									<span></span>
-								</div>
-								<a href="#">learn more</a>
-							</div>
-						</div>
+						<figure>
+							<img src="./images/pages/about/icons/process/icon02.jpg" alt="Preparation">
+							<figcaption>prototype</figcaption>
+						</figure>
 					</div>
-					<!-- Item end -->
-					<div class="works__item " data-bg="#ebf8f3" data-scroll data-scroll-class="js-reveal">
-						<div class="image">
-							<a href="./images/sections/works/3.jpg" data-fslightbox>
-								<img src="./images/sections/works/3.jpg" alt="Work 3">
-							</a>
+					<!-- Process item end -->
+					<div class="process__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<div class="process__count">
+							<span>03</span>
 						</div>
-						<div class="content">
-							<small>AMAZING USER INTERFACE & SMOOTH INTERACTION</small>
-							<h3>
-								<span>karamel</span>
-								coffee
-							</h3>
-							<div class="custom-link">
-								<div class="lines">
-									<span></span>
-									<span></span>
-								</div>
-								<a href="#">learn more</a>
-							</div>
-						</div>
+						<figure>
+							<img src="./images/pages/about/icons/process/icon03.jpg" alt="Preparation">
+							<figcaption>execution</figcaption>
+						</figure>
 					</div>
-					<!-- Item end -->
+					<!-- Process item end -->
+					<div class="process__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<div class="process__count">
+							<span>04</span>
+						</div>
+						<figure>
+							<img src="./images/pages/about/icons/process/icon04.jpg" alt="Preparation">
+							<figcaption>launched</figcaption>
+						</figure>
+					</div>
+					<!-- Process item end -->
 				</div>
 			</div>
 		</section>
-		<!-- Works end -->
+		<!-- Process end -->
 
-		<!-- Work with us start -->
-		<section class="section work-with-us bg-primary bg-noise">
+
+		<!-- Team start -->
+		<section class="section team bg-primary">
 			<div class="container">
-				<div class="title " data-scroll data-scroll-class="js-reveal">
-					<h6>START WORKING WITH US</h6>
-					<h2 data-text="Hire Us">So that's us. There's no other way to put it.</h2>
+				<div class="title" data-scroll data-scroll-class="js-reveal">
+					<h6>our amazing fully skilled team members</h6>
+					<h2 data-text="Team">Team members</h2>
 				</div>
-				<h4 class="text " data-scroll data-scroll-class="js-reveal">DO YOU HAVE A PROJECT OPPORTUNITY, OR ARE YOU JUST A LOOKING TO GET CREATIVE SOLUTIONS?</h4>
-				<div class="custom-link " data-scroll data-scroll-class="js-reveal">
-					<div class="lines">
-						<span></span>
-						<span></span>
+
+				<div class="team__container flex">
+					<div class="team__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<figure>
+							<img src="./images/pages/about/team/1.webp" alt="">
+							<figcaption>
+								<small>Senior UI Designer</small>
+								<h4>ALEX O'KHARIN</h4>
+							</figcaption>
+						</figure>
 					</div>
-					<a href="#">get started</a>
+					<!-- Team item end -->
+					<div class="team__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<figure>
+							<img src="./images/pages/about/team/2.webp" alt="">
+							<figcaption>
+								<small>Back-end Developer</small>
+								<h4>TIMMY ABSLTER</h4>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team item end -->
+					<div class="team__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<figure>
+							<img src="./images/pages/about/team/3.jpg" alt="">
+							<figcaption>
+								<small>Project Manager</small>
+								<h4>DANNY GLOBER</h4>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team item end -->
+					<div class="team__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<figure>
+							<img src="./images/pages/about/team/4.jpg" alt="">
+							<figcaption>
+								<small>Interaction Designer</small>
+								<h4>BRADD LAPCAN</h4>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team item end -->
+					<div class="team__item flex__item" data-scroll data-scroll-class="js-reveal">
+						<figure>
+							<img src="./images/pages/about/team/5.jpg" alt="">
+							<figcaption>
+								<small>Senior .Net Dev</small>
+								<h4>JACK LAOURAM</h4>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team item end -->
 				</div>
 			</div>
 		</section>
-		<!-- Work with us end -->
-
+		<!-- Team end -->
 
 		<!-- Clients start -->
 		<section class="section clients bg-lines">

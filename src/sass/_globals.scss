@@ -46,7 +46,7 @@ img {
 
 .js-reveal {
 	opacity: 1;
-	transition: opacity $t-time $t-ease;
+	transition: opacity $t-time $t-ease 200ms;
 }
 
 
@@ -125,6 +125,21 @@ img {
 	margin: 0 auto;
 	padding: 0 2rem;
 	overflow: hidden;
+}
+
+.flex {
+	@include flex(flex-start);
+	flex-wrap: wrap;
+
+	@include mq(400px) {
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 20rem;
+		margin: 1rem 0;
+	}
 }
 
 .logo {
@@ -352,6 +367,9 @@ img {
 			top: -12.5vw;
 		}
 	}
+
+
+
 }
 
 .lead {

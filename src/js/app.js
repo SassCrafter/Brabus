@@ -50,6 +50,8 @@ function changeBgOnHover() {
 
 const heroSlider = new HeroSlider();
 
+VanillaTilt.init(document.querySelectorAll('.js-tilt'))
+
 changeNavOnScroll();
 opacityScroll();
 scrollReveal();
@@ -90,6 +92,7 @@ barba.use(barbaPrefetch);
 
 barba.hooks.beforeLeave((data) => {
     scroll.destroy();
+    VanillaTilt.destroy();
 });
 
 barba.hooks.after((data) => {
@@ -99,6 +102,8 @@ barba.hooks.after((data) => {
 	changeBgOnHover();
 	checkLinks();
 	refreshFsLightbox();
+	VanillaTilt.init(document.querySelectorAll('.js-tilt'));
+	document.querySelector('.hero video').play();
 });
 
 
